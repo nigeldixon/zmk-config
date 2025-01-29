@@ -16,9 +16,17 @@
             td0: tap_dance_0 {
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
-                tapping-term-ms = <200>;
-                bindings = <&mo 1>, <&tog 1>;
+                tapping-term-ms = <100>;
+                bindings = <&mo 1>, <&to 1>;
             };
+
+            // this is a hack to allow us to use win+alt as launcher for keyperinha_launcher
+            keyp: keyperinha_launcher {
+              compatible = "zmk,behavior-mod-morph";
+              #binding-cells = <0>;
+              bindings = <&kp LALT>, <&kp K>;
+              mods = <(MOD_LWIN)>;
+          };
         };
 
         conditional_layers {
@@ -43,7 +51,7 @@
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &td0 &kp SPACE   &kp RET &mo 2 &kp LALT
+                  &kp LGUI &td0 &kp SPACE   &kp RET &mo 2 &keyp
                         >;
                 };
                 lower_layer {
