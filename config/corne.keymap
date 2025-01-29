@@ -27,6 +27,7 @@
               #binding-cells = <0>;
               bindings = <&kp LALT>, <&kp DEL>;
               mods = <(MOD_LGUI|MOD_RGUI)>;
+              keep-mods = <(MOD_LGUI)>;
           };
         };
 
