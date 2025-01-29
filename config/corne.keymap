@@ -20,11 +20,12 @@
                 bindings = <&mo 1>, <&to 1>;
             };
 
-            // this is a hack to allow us to use win+alt as launcher for keyperinha_launcher
+            // this is a hack to allow us to use win+alt as launcher for keypirinha_launcher
+            // This assume keypirihna is bound to Win+Del
             keyp: keyperinha_launcher {
               compatible = "zmk,behavior-mod-morph";
               #binding-cells = <0>;
-              bindings = <&kp LALT>, <&kp K>;
+              bindings = <&kp LALT>, <&kp KDEL;
               mods = <(MOD_LGUI)>;
           };
         };
