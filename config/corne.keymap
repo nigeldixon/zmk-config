@@ -20,6 +20,14 @@
             tapping-term-ms = <200>;
             bindings = <&mo 1>, <&tog 1>
         };
+
+
+        keyp: keypirinha {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp k>, <&kp LALT>;
+            mods = <(MOD_LGUI)>;
+        };
     };
 
   conditional_layers {
