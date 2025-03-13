@@ -25,7 +25,7 @@
             keyp: keyperinha_launcher {
               compatible = "zmk,behavior-mod-morph";
               #binding-cells = <0>;
-              bindings = <&kp LALT>, <&kp DEL>;
+              bindings = <&kp F11>;
               mods = <(MOD_LGUI|MOD_RGUI)>;
               keep-mods = <(MOD_LGUI)>;
           };
